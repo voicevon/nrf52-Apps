@@ -10,13 +10,13 @@
 #define LED_PIN   LED_BUILTIN
 
 //custom boards may override default pin definitions with BLEPeripheral(PIN_REQ, PIN_RDY, PIN_RST)
-BLEPeripheral                    blePeripheral                            = BLEPeripheral();
+BLEPeripheral blePeripheral = BLEPeripheral();
 
 // create service
-BLEService               ledService           = BLEService("19b10000e8f2537e4f6cd104768a1214");
+BLEService ledService = BLEService("19b10000e8f2537e4f6cd104768a1214");
 
 // create switch characteristic
-BLECharCharacteristic    switchCharacteristic = BLECharCharacteristic("19b10001e8f2537e4f6cd104768a1214", BLERead | BLEWrite);
+BLECharCharacteristic switchCharacteristic = BLECharCharacteristic("19b10001e8f2537e4f6cd104768a1214", BLERead | BLEWrite);
 
 void setup() {
   Serial.begin(9600);
